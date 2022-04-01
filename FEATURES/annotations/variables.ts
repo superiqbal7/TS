@@ -34,3 +34,10 @@ let point: {x: number; y: number} = {
 const sum: (x: number, y: number) => number = (x: number, y: number) => x+y;
 const sumValue = sum(5,3);
 console.log(sumValue);
+
+
+//When to use annotations
+//1. Function that returns the 'any' type
+const json = '{"x": "any", "y": "any"}';
+const coordiantes = JSON.parse(json);
+console.log(typeof coordiantes);
