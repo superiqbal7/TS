@@ -39,5 +39,5 @@ console.log(sumValue);
 //When to use annotations
 //1. Function that returns the 'any' type
 const json = '{"x": "any", "y": "any"}';
-const coordiantes = JSON.parse(json);
+const coordiantes: { x: number; y: number } = JSON.parse(json);
 console.log(typeof coordiantes);
