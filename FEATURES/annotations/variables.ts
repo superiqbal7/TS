@@ -41,3 +41,23 @@ console.log(sumValue);
 const json = '{"x": "any", "y": "any"}';
 const coordiantes: { x: number; y: number } = JSON.parse(json);
 console.log(typeof coordiantes);
+
+//2. When we declare a variable on one line and initialize it later
+let words = ['red', 'green', 'blue', 'yellow'];
+let foundWord: boolean;
+
+for(let i =0; i < words.length; i++) {
+  if(words[i] === 'red') {
+    foundWord = true;
+  }
+}
+
+// 3. Variable whose type can't be inferred correctly
+let numbers = [-10, -1, 10];
+let numberAboveZero: boolean | number = false;
+
+for(let i = 0; i < numbers.length; i++) {
+  if(numbers[i] > 0){
+    numberAboveZero = numbers[i];
+  }
+}
