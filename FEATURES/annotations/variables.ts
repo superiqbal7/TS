@@ -28,3 +28,9 @@ let point: {x: number; y: number} = {
   y: 5
   //a: 20 //--type error--//
 }
+
+//functions
+
+const sum: (x: number, y: number) => number = (x: number, y: number) => x+y;
+const sumValue = sum(5,3);
+console.log(sumValue);
