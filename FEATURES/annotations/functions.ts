@@ -23,3 +23,21 @@ const throwError = (message: string): never => {
 const throwError2 = (message: string): void => {
   if(!message) throw new Error(message);
 }
+
+//Destructuring with Annotations
+
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny'
+};
+
+// const logWeather = (forecast: { date: Date, weather: string }) => {
+//   console.log(forecast.date);
+//   console.log(forecast.weather);
+// }
+
+const logWeather = ({date, weather}: { date: Date, weather: string }) => {
+  console.log(date);
+  console.log(weather);
+}
+logWeather(todaysWeather);
