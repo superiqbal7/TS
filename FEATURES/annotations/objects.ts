@@ -10,6 +10,8 @@ const profile = {
   }
 }
 
+
+//destructuring object with annot
 const {age, name}: {age: number; name: string} = profile;
 
 const { coords: {lattitude, longitude} }: { coords: {lattitude: number, longitude: number}} = profile;
