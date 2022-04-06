@@ -13,23 +13,26 @@ export class CustomMap {
     });
   }
 
-  addUserMarker(user: User) {
+//--for additonal or case we need to import classes
+//--ts limit number of propeties of mappable based on common properties of User and Company
+//--we can ony refer to properties if both of them are in User and Company
+  addMarker(mappable: User | Company): void {
     new google.maps.Marker({
       map: this.googleMap,
       position: {
-        lat: user.location.latitude,
-        lng: user.location.longitude
+        lat: mappable.location.latitude,
+        lng: mappable.location.longitude
       }
     })
   }
 
-  addCompanyMarker(company: Company) {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: {
-        lat: company.location.latitude,
-        lng: company.location.longitude
-      }
-    })
-  }
+  // addCompanyMarker(company: Company) {
+  //   new google.maps.Marker({
+  //     map: this.googleMap,
+  //     position: {
+  //       lat: company.location.latitude,
+  //       lng: company.location.longitude
+  //     }
+  //   })
+  // }
 }
